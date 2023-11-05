@@ -1,0 +1,380 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    list-style: none;
+    font-family: monospace;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-image: url(bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+
+.button{
+    padding: .7rem 1.4rem;
+    border: 0.2rem solid #000;
+    color: #000;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    transition: .3s ease;
+    width: max-content;
+}
+.button:hover{
+    color: goldenrod;
+    border: .2rem solid goldenrod;
+}
+
+section{
+    margin-top: 5rem;
+}
+
+
+
+
+nav{
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    align-items: center;
+    background: #fff;
+}
+nav .logo img{
+    height: 2.5rem;
+    padding-left: 1rem;
+    filter: brightness(-200);
+    filter: contrast(30);
+}
+.nav-links a{
+    font-size: 1rem;
+    color: #0d0d0d;
+    transition: .2s ease;
+}
+.nav-links a:hover{
+    color: #aaa;
+}
+
+.nav-links a:target{
+    color: red;
+}
+
+.nav-links, .social-media{
+display: flex;
+gap: 1rem;
+}
+.social-media a{
+    color: #000;
+    transition: .2s ease;
+}
+.social-media a:hover{
+    color: #aaa;
+}
+
+.home{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-left: 4rem;
+    padding-top: 2rem;
+
+}
+.home .content{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 3rem;
+}
+.home .content h1{
+    font-size: 4rem;
+    font-weight: bold;
+    color: #fff;
+}
+.home .content p{
+    font-size: 1.2rem;
+    color: #aaa;
+}
+.home .content .button{
+    color: #fff;
+    border-color: #fff;
+}
+.home .content .button:hover{
+    color: goldenrod;
+    border: .2rem solid goldenrod;
+}
+
+.about{
+    height: 80vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 35% 65%;
+    background: #fff;
+    margin-top: 4rem;
+    padding-top: 4rem;
+}
+.about .main{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0rem 2rem;
+}
+.about .main span{
+    color: #aaa;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.about .main h1{
+    padding-bottom: 1.5rem;
+    text-transform: capitalize;
+    font-size: 3rem;
+}
+.about .main p{
+    width: 80%;
+    color: #aaa;
+    font-size: 1.2rem;
+}
+.about .container{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: repeat(auto-fill, minmax(48%, 1fr));
+    gap: 2rem;
+}
+.about .container i{
+    font-size: 3rem;
+    color: goldenrod;
+}
+.about .container h3{
+    font-size: 1.5rem;
+    padding: 1rem 0rem;
+    text-transform: uppercase;
+}
+.about .container p{
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.gallery{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 3.5rem;
+}
+.gallery .container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem 3rem;
+
+}
+.gallery .container .item{
+    width: 33%;
+    height: 15rem;
+    position: relative;
+    top: 0;left: 0;
+    cursor: pointer;
+}
+.gallery .container .item img{
+    width: 100%;
+    height: 100%;
+}
+.gallery .container .item a{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    background: #aaa;
+    transition: .3s ease;
+    display: flex;
+    color: goldenrod;
+    font-size: 1.5rem;
+}
+.gallery .container .item a{
+    display: none;
+}
+.gallery .container .item:hover a{
+    display: flex;
+}
+
+.services{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 3rem 4rem;
+    background: #fff;
+}
+.services .container{
+    display: flex;
+}
+.services .container .content{
+    width: 33%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0rem 2rem;
+}
+.services .container .content span{
+    color: #aaa;
+    gap: none;
+}
+.services .container .content p{
+    padding: 1rem 0rem;
+}
+.services .container .content:nth-child(1) span{
+    text-align: end;
+    padding-right: 1rem;
+}
+.services .container .content h1{
+    padding-top: .2rem;
+    padding-bottom: 1.5rem;
+    font-size: 2.5rem;
+}
+.services .container .content img{
+    width: 100%;
+    height: 100%;
+}
+
+.pricing{
+    width: 100%;
+    text-align: center;
+    height: auto;
+    background: #eee;
+    padding: 5rem 3rem;
+}
+.pricing span{
+    color: #aaa;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    padding: .5rem;
+}
+.pricing h1{
+    font-size: 2rem;
+    text-transform: capitalize;
+    padding-bottom: 3rem;
+}
+
+.pricing .container{
+    background: #ddd;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+}
+
+.price-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0rem;
+    border: 1rem solid transparent;
+    text-transform: capitalize;
+    background: #fff;
+    transition: .3s ease;
+}
+.price-item:hover{
+    border: 1rem solid goldenrod;
+}
+
+.price-item h2{
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    padding-top: 1rem;
+    padding-bottom: .5rem;
+}
+.price-item i{
+    color: #aaa;
+}
+
+.price{
+    width: 100%;
+    background: linear-gradient(to bottom right, #ffffff, #a3d8f4);
+    margin: 2rem 0rem;
+    padding: 3rem 0rem;
+}
+
+
+.price{
+    background: #f0f0f0;
+}
+
+
+.price h1{
+    padding-bottom: 1rem;
+    font-size: 4rem;
+    color: #000;
+}
+.price h1 span{
+    color: #000;
+    font-size: 2rem;
+}
+.price p{
+    text-transform: none;
+    font-style: italic;
+    color: #aaa;
+}
+
+.price-item .features{
+    width: 100%;
+}
+.price-item .features ul{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-bottom: 2rem;
+}
+.price-item .features span{
+    color: #000;
+    text-transform: capitalize;
+}
+.price-item .features li{
+    border-bottom: 1px solid #aaa;
+    padding: 1rem 0rem;
+}
+
+footer{
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    align-items: center;
+}
+footer p{
+    color: #aaa;
+}
+footer .social-media a{
+    color: #aaa;
+    transition: .3 ease;
+}
+footer .social-media a:hover{
+    color: goldenrod;
+}
